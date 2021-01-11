@@ -11,6 +11,7 @@ const Text = ({
   lineHeight,
   color,
   children,
+  ...props
 }) => {
   return (
     <TextWrapper
@@ -19,7 +20,8 @@ const Text = ({
       lineHeight={lineHeight}
       fontWeight={fontWeight}
       color={color}
-      align={align}>
+      align={align}
+      {...props}>
       {children}
     </TextWrapper>
   );

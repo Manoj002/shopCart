@@ -33,9 +33,9 @@ export const EmailRowWrapper = styled.View`
   flex: 0.2;
   flex-direction: row;
   align-items: center;
-  background: red;
 `;
 
 export const EmailWrapper = styled(LogoWrapper)`
-  margin-left: 0px;
+  margin-left: 20px;
+  margin-right: 20px;
 `;

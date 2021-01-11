@@ -10,6 +10,7 @@ import {
   EmailRowWrapper,
   EmailWrapper,
 } from './SignIn.styles';
+import TextInput from '../../components/TextInput';
 import * as COLORS from '../../utils/colors';
 
 const Logo = require('../../../assets/images/Logo.png');
@@ -17,6 +18,8 @@ const Email = require('../../../assets/images/Email.png');
 const Lock = require('../../../assets/images/Lock.png');
 
 const SignIn = () => {
+  const [email, setEmail] = React.useState('');
+  const [password, setPassword] = React.useState('');
   useEffect(() => {
     AsyncStorage.getItem('login_token')
       .then(() => {})
@@ -38,7 +41,23 @@ const SignIn = () => {
         Sign In
       </SignInText>
       <EmailRowWrapper>
-        <EmailWrapper source={Email} />
+        <TextInput
+          label="Email"
+          left={<EmailWrapper source={Email} />}
+          selectionColor={COLORS.lightBlue}
+          value={email}
+          onChangeText={(newEmail) => setEmail(newEmail)}
+        />
+      </EmailRowWrapper>
+
+      <EmailRowWrapper>
+        <TextInput
+          label="Password"
+          left={<EmailWrapper source={Lock} />}
+          selectionColor={COLORS.lightBlue}
+          value={password}
+          onChangeText={(newPassword) => setEmail(newPassword)}
+        />
       </EmailRowWrapper>
     </Container>
   );
