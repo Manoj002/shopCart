@@ -1,5 +1,7 @@
 import styled from 'styled-components/native';
 import {Image} from 'react-native';
+import Text from '../../components/Text';
+import * as COLORS from '../../utils/colors';
 
 export const Container = styled.View`
   flex: 1;
@@ -20,7 +22,7 @@ export const HandleBar = styled.View`
   width: 50px;
   border-radius: 1px;
   margin-top: 8px;
-  background-color: green;
+  background-color: ${COLORS.lightGreen};
 `;
 
 export const DescriptionWrapper = styled.View`
@@ -28,9 +30,13 @@ export const DescriptionWrapper = styled.View`
   padding-horizontal: 2px;
 `;
 
+export const Description = styled(Text)`
+  flex: 1;
+`;
+
 export const GetStartedButton = styled.View`
   flex: 0.1;
   justify-content: center;
   align-items: center;
-  background-color: blue;
+  background-color: ${COLORS.lightBlue};
 `;

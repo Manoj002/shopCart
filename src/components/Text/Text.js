@@ -1,6 +1,7 @@
 import React from 'react';
 import {TextWrapper} from './Text.styles';
 import PropTypes from 'prop-types';
+import * as COLORS from '../../utils/colors';
 
 const Text = ({
   fontSize,
@@ -40,7 +41,7 @@ Text.defaultProps = {
   fontWeight: '100',
   align: 'left',
   marginTop: 0,
-  color: 'black',
+  color: COLORS.black,
   children: null,
 };
 

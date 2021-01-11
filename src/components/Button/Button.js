@@ -1,6 +1,7 @@
 import React from 'react';
 import {Container, Title} from './Button.styles';
 import PropTypes from 'prop-types';
+import * as COLORS from '../../utils/colors';
 
 const Button = ({
   rounded,
@@ -37,8 +38,8 @@ Button.defaultProps = {
   rounded: false,
   width: 200,
   title: 'custom',
-  titleColor: 'black',
-  backgroundColor: 'blue',
+  titleColor: COLORS.black,
+  backgroundColor: COLORS.lightBlue,
   onPress: () => {},
 };
 
